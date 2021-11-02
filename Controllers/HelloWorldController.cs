@@ -11,10 +11,6 @@ namespace MyFirstApi.Controllers
     [Route("[controller]")]
     public class HelloWorldController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
 
         private readonly ILogger<HelloWorldController> _logger;
 

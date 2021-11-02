@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using MyFirstApi.Middleware;
 
 namespace MyFirstApi
 {
@@ -45,9 +46,8 @@ namespace MyFirstApi
             }
 
             // app.UseHttpsRedirection();
-
+            app.UseMiddleware<MiddleWare>();
             app.UseRouting();
-
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
